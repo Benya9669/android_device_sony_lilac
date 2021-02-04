@@ -4,38 +4,39 @@ Device configuration for Sony Xperia XZ1 Compact (lilac)
 Description
 -----------
 
-This repository is for LineageOS 17.1 on Sony Xperia XZ1 Compact (lilac).
+This repository is for RR on Sony Xperia XZ1 Compact (lilac).
 
-How to build LineageOS
+How to build RR
 ----------------------
 
 * Make a workspace:
 
-        mkdir -p ~/lineageos
-        cd ~/lineageos
+        mkdir -p ~/rr
+        cd ~/rr
 
 * Initialize the repo:
 
-        repo init -u git://github.com/LineageOS/android.git -b lineage-17.1
+        repo init -u https://github.com/ResurrectionRemix/platform_manifest.git -b Q
 
 * Create a local manifest:
 
-        vim .repo/local_manifests/roomservice.xml
+        cd .repo & mkdir local_manifests
+        cd local_manifests & nano roomservice.xml
 
         <?xml version="1.0" encoding="UTF-8"?>
         <manifest>
             <!-- SONY -->
             <project name="whatawurst/android_kernel_sony_msm8998" path="kernel/sony/msm8998" remote="github" revision="lineage-17.1" />
             <project name="whatawurst/android_device_sony_yoshino-common" path="device/sony/yoshino-common" remote="github" revision="lineage-17.1" />
-            <project name="whatawurst/android_device_sony_lilac" path="device/sony/lilac" remote="github" revision="lineage-17.1" />
+            <project name="Benya9669/android_device_sony_lilac" path="device/sony/lilac" remote="github" revision="rr-q" />
 
             <!-- Pinned blobs for lilac -->
-            <project name="whatawurst/android_vendor_sony_lilac" path="vendor/sony/lilac" remote="github" revision="lineage-17.1" />
+            <project name="shank03/android_vendor_sony_lilac" path="vendor/sony/lilac" remote="github" revision="ten" />
         </manifest>
 
 * Sync the repo:
 
-        repo sync
+        repo sync -f --force-sync --no-clone-bundle
 
 * Extract vendor blobs
 
@@ -45,7 +46,7 @@ How to build LineageOS
 * Setup the environment
 
         source build/envsetup.sh
-        lunch lineage_lilac-userdebug
+        lunch rr_lilac-userdebug
 
 * Build LineageOS
 
