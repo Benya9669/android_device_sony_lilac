@@ -4,7 +4,7 @@ Device configuration for Sony Xperia XZ1 Compact (lilac)
 Description
 -----------
 
-This repository is for RR on Sony Xperia XZ1 Compact (lilac).
+This repository is for RR OS 2020 on Sony Xperia XZ1 Compact (lilac).
 
 How to build RR
 ----------------------
