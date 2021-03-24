@@ -62,3 +62,7 @@ BOARD_VNDK_VERSION := current
 ### SYSTEM PROPS
 # Add device-specific ones
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+GAPPS_VARIANT := pico
+TARGET_GAPPS_ARCH := arm64

@@ -18,11 +18,6 @@ TARGET_BOOTANIMATION_HALF_RES := true
 ### RR
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-### GAPPS
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
-GAPPS_VARIANT := pico
-TARGET_GAPPS_ARCH := arm64
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := rr_lilac
 PRODUCT_DEVICE := lilac
