@@ -9,6 +9,10 @@ endif
 ifeq ($(WITH_MICROG),true)
 $(call inherit-product, vendor/microg/microg-vendor.mk)
 endif
+ifeq ($(WITH_GAPPS),true)
+GAPPS_VARIANT := pico
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+endif
 
 ### DALVIK
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
