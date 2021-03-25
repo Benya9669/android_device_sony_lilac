@@ -16,10 +16,10 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_BOOTANIMATION_HALF_RES := true
 
 ### LINEAGE
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_lilac
+PRODUCT_NAME := arrow_lilac
 PRODUCT_DEVICE := lilac
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := G8441
@@ -30,11 +30,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="G8441-user 9 47.2.A.11.228 3311891731 release-keys"
 
 BUILD_FINGERPRINT := Sony/G8441/G8441:9/47.2.A.11.228/3311891731:user/release-keys
-
-ifneq ($(LINEAGE_DEV_CERTIFICATE),)
-    PRODUCT_DEFAULT_DEV_CERTIFICATE := $(LINEAGE_DEV_CERTIFICATE)
-endif
-
-ifneq ($(LINEAGE_VERITY_CERTIFICATE),)
-    PRODUCT_VERITY_SIGNING_KEY := $(LINEAGE_VERITY_CERTIFICATE)
-endif
