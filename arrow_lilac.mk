@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 # vendor/lineage/config/common.mk
-TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOTANIMATION_RES := 720
 
 ### LINEAGE
 $(call inherit-product, vendor/arrow/config/common.mk)
@@ -24,6 +24,7 @@ PRODUCT_DEVICE := lilac
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := G8441
 PRODUCT_MANUFACTURER := Sony
+DEVICE_MAINTAINER := benya
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=lilac \
