@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 # vendor/arrow/config/common.mk
-TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOTANIMATION_RES := 720
 
 ### arrow
 $(call inherit-product, vendor/arrow/config/common.mk)
@@ -24,10 +24,13 @@ PRODUCT_DEVICE := lilac
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := G8441
 PRODUCT_MANUFACTURER := Sony
+DEVICE_MAINTAINER := benya
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
+	PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=lilac \
     PRIVATE_BUILD_DESC="G8441-user 9 47.2.A.11.228 3311891731 release-keys"
 
 BUILD_FINGERPRINT := Sony/G8441/G8441:9/47.2.A.11.228/3311891731:user/release-keys
 
+#IS_PHONE := true
+#TARGET_GAPPS_ARCH := arm64
