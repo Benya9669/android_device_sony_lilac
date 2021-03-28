@@ -14,6 +14,7 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 # vendor/lineage/config/common.mk
 TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOTANIMATION_RES := 720
 
 ### LINEAGE
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
