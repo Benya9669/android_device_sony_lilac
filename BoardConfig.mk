@@ -29,13 +29,6 @@ TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-lilac_defconfig
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=lilac
 
-KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-13/bin
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-13
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
-TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := 13
-
 ### PARTITIONS
 # See also /proc/partitions on the device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
