@@ -16,6 +16,10 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_BOOT_ANIMATION_RES := 720
 
+SAKURA_BUILD_TYPE := gapps
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+
 ### LINEAGE
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
