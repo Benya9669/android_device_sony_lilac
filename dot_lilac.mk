@@ -16,15 +16,11 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_BOOT_ANIMATION_RES := 720
 
-SAKURA_BUILD_TYPE := gapps
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-
-### LINEAGE
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+### DotOS
+$(call inherit-product, vendor/dot/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_lilac
+PRODUCT_NAME := dot_lilac
 PRODUCT_DEVICE := lilac
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := G8441

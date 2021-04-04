@@ -15,4 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_lilac.mk
+    $(LOCAL_DIR)/dot_lilac.mk
+
+COMMON_LUNCH_CHOICES := \
+    dot_lilac-user \
+    dot_lilac-userdebug \
+    dot_lilac-eng
