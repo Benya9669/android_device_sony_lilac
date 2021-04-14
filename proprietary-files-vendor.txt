@@ -885,7 +885,6 @@ vendor/lib64/vendor.semc.hardware.light@1.0.so
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/media_codecs_performance.xml
-vendor/etc/media_profiles_V1_0.xml
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
@@ -929,6 +928,7 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libvpphvx.so
 vendor/lib64/libvpplibrary.so
+vendor/odm/etc/media_profiles_V1_0.xml:vendor/etc/media_profiles_V1_0.xml
 
 # MSM
 vendor/bin/msm_irqbalance
